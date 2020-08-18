@@ -73,3 +73,9 @@ b = [2, 3]
 a.push(1)
 #配列を*付きで追加する
 a.push(*b)
+
+def greeting(*names)
+	"#{names.join('と')}, こんにちは！"
+end
+
+puts greeting('中村さん', '田中さん', '佐藤さん')
