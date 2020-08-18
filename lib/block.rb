@@ -39,6 +39,37 @@
 
 #上の書き換え（&:使用）
 
-a = ['ruby', 'java', 'perl'].map(&:upcase)
+#a = ['ruby', 'java', 'perl'].map(&:upcase)
 
-puts a
+#puts a
+
+#a = [1, 2, 3, 4, 5]
+#1個目、３個目、長さ
+#b = a.values_at(0, 2, 4)
+
+#puts b
+
+#set class
+require 'set'
+
+a = Set.new([1, 2, 3])
+b = Set.new([3, 4, 5])
+
+puts a | b
+puts a - b
+puts a & b
+
+#pushメソッド
+
+#a = []
+
+#a.push(1)
+#a.push(2, 3)
+
+#splat展開（配列がそのまま入ってしまう問題の解消）
+
+a = []
+b = [2, 3]
+a.push(1)
+#配列を*付きで追加する
+a.push(*b)
