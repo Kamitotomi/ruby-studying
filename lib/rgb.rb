@@ -85,15 +85,25 @@ def to_hex(r, g, b)
 	end
 end
 
+#def to_ints(hex)
+#	r = hex[1..2]
+#	g = hex[3..4]
+#	b = hex[5..6]
+#	ints = []
+#	[r, g, b].each do |s|
+		#16進数にして配列に入れる
+#		ints << s.hex
+#	end
+#	ints
+#end
+
+#上記のto_intsはmapメソッドで置き換え可能
+
 def to_ints(hex)
 	r = hex[1..2]
 	g = hex[3..4]
 	b = hex[5..6]
-	ints = []
-	[r, g, b].each do |s|
-		ints << s.hex
+	[r, g, b].map do |s|
+		s.hex
 	end
-	ints
 end
-
-
