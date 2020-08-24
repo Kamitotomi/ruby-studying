@@ -74,3 +74,33 @@ dimensions.each do |length, width|
 end
 
 puts areas
+
+
+#timesメソッド
+
+sum = 0
+#5回処理を繰り返す
+5.times{|n| sum += n}
+sum
+
+#nからｍまで数値を１ずつ増やしながら処理するときはupto
+
+#a = []
+#10.upto(14){|n| a << n}
+#a
+#上記はdowntoで逆の結果になる
+
+#step	引数は(上限, 増減する大きさ)
+#a = []
+#1.step(10, 2){|n| a << n}
+#a
+
+
+#繰り返し処理を構文で行う場合
+#1.while
+#配列の要素が5個になるまで
+a = []
+
+while a.size < 5
+	a << 1
+end
