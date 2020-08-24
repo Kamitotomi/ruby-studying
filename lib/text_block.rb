@@ -104,3 +104,74 @@ a = []
 while a.size < 5
 	a << 1
 end
+
+# until
+a = [10, 20, 30, 40, 50]
+until a.size <= 3
+	a.delete_at(-1)
+end
+
+#繰り返し処理用の制御構造
+#break
+
+numbers = [1, 2, 3, 4, 5].shuffle
+numbers.each do |n|
+	puts n
+	break if n == 5
+end
+
+#catch & returnで全ての繰り返しから脱出
+
+fruits = ['apple', 'orange', 'melon']
+numbers = [1, 2, 3]
+catch :done do
+	fruits.shuffle.each do |fruit|
+		numbers.shuffle.each do |n|
+			 puts "#{fruit}, #{n}"
+			if fruit == 'orange' && n == 3
+				#catchと一致しないタグをthrowする
+				throw :foo
+			end
+		end
+	end
+end
+
+
+ret = 
+	catch :done do
+		throw :done, 123
+	end
+ret
+
+#next
+
+numbers = [1,2,3,4,5]
+numbers.each do |n|
+	#偶数なら中断して次に
+	next if n.even?
+	puts n
+end
+
+numbers = [1,2,3,4,5]
+i = 0
+
+while i < numbers.size
+	n = numbers[i]
+	i += 1
+	#while内でnextを使用
+	next if n.even?
+	puts n
+end
+
+#redo(繰り返し処理)のやり直し
+
+foods = ['ピーマン', 'トマト', 'セロリ']
+foods.each do |food|
+	print "#{food}は好きですか？"
+	#sampleは配列からランダムに１要素を選択する
+	answer = ['はい', 'いいえ'].sample
+	puts answer
+	#はいと答えなければ聞き返す。なんか怖いなそれ。
+	redo unless answer == 'はい'
+	
+end
