@@ -117,4 +117,14 @@ def user_exists?
 	end
 end
 
-user_exists(user)
+user
+#上記はこう書き換えられる
+
+def user_exists?
+	!!find_user
+end
+
+!!true
+!!1
+!!false
+!!nil
