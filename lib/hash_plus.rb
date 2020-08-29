@@ -72,3 +72,49 @@ h[:bar]
 
 #ハッシュにはキーと値が追加されていることを確認
 puts h
+
+#あるあるイディオム
+
+#国名に応じて通過を返す
+
+def find_currency(country)
+	currencies = { japan: 'yen', us: 'dollar', india: 'rupee' }
+	currencies[country]
+end
+
+def show_currency(country)
+	currency = find_currency(country)
+
+	if currency
+		currency.upcase
+	end
+end
+
+show_currency(:japan)
+
+show_currency(:itary)
+
+find_currency(:japan)
+
+
+#||=を使った自己代入
+
+limit = nil
+
+limit ||= 10
+limit
+
+
+#!!を使った真偽値の型変換
+
+def user_exists?
+	#DBなどからユーザーを探す(なければnil)
+	user = find_user
+	if user
+		true
+	else
+		false
+	end
+end
+
+user_exists(user)

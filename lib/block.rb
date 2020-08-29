@@ -1,10 +1,10 @@
 #空の配列を用意して他の配列をループ処理した結果を埋め込んでいくのはmapでできる。
 
-#numbers = [1, 2, 3, 4, 5]
+numbers = [1, 2, 3, 4, 5]
 
-#new_numbers = numbers.map{|n| n * 10}
+new_numbers = numbers.map{|n| n * 10}
 
-#puts new_numbers
+puts new_numbers
 
 #numbers = [1, 2, 3, 4, 5, 6]
 #戻り値が真になった要素だけが集められる
