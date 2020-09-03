@@ -31,6 +31,11 @@ class User
 		@last_name = last_name
 		@age = age
 	end
+	#氏名を作成するメソッド
+
+	def full_name
+		"#{first_name} #{last_name}"	
+	end
 end
 
 #ユーザーのデータを作成する
@@ -39,13 +44,11 @@ users = []
 users << User.new('Alice', 'Hirose', '25')
 users << User.new('Ayase', 'Miura', '30')
 
-#氏名を作成するメソッド
-
-def full_name(user)
-	"#{user.first_name} #{user.last_name}"	
-end
 
 #表示
 users.each do |user|
-	puts "氏名: #{full_name(user)}, 年齢: #{user.age}"
+	puts "氏名: #{user.full_name}, 年齢: #{user.age}"
 end
+
+#オブジェクトとはクラスを基に作られたデータの塊
+
