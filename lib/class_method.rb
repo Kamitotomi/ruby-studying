@@ -18,6 +18,7 @@ class User
 	end
 end
 
+# こいつらが、クラスメソッドを経由して@nameとして保存される？
 names = ['Alice', 'Bob', 'Marthin']
 # クラスメソッドの呼び出し
 users = User.create_users(names)
