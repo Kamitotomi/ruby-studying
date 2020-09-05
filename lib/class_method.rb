@@ -11,7 +11,7 @@ class User
 			User.new(name)
 		end		
 	end
-	# インスタンスメソッド
+	# インスタンスメソッド（名前の配列を渡すとUserクラスのインスタンスを配列にして返す）
 	def hello
 		# インスタンス変数に保存されている名前を表示する
 		"Hello, I am #{@name}"
