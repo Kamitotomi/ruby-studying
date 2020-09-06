@@ -29,9 +29,7 @@ class Gate
 		from = STATIONS.index(ticket.stamped_at)
 		# indexは配列の中から引数に合致する要素の添え字（（:juso）なら１）を取得
 		to = STATIONS.index(@name)
-		# 降車駅の添え字　－　乗車駅の添え字で区間の長さを取得
-		distance = to - from
-		# 「区間の長さ　－　１」を添え字として適切な運賃を取得
-		FARES[distance - 1]
+		
+    FARES[distance - 1]
 	end
 end
