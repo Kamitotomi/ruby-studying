@@ -29,7 +29,7 @@ class Gate
 		from = STATIONS.index(ticket.stamped_at)
 		# indexは配列の中から引数に合致する要素の添え字（（:juso）なら１）を取得
 		to = STATIONS.index(@name)
-		distance = to - from
-		FARES[distance - 1]
+		
+    FARES[distance - 1]
 	end
 end
