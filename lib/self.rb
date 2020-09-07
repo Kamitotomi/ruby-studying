@@ -57,3 +57,43 @@ user = User.new('Ayumi')
 user.rename_to_bob
 user.rename_to_gibson
 user.rename_to_marray
+
+
+# クラス名.メソッド
+
+class Product
+	attr_reader :name, :price
+
+	def initialize(name, price)
+		@name = name
+		@price = price
+	end
+
+	# 金額を整形するメソッド
+	def self.format_price(price)
+		"#{price}円"
+	end
+
+	def to_s
+		# インスタンスメソッドからクラスメソッドを呼び出す
+		formatted_price = Product.format_price(price)
+		"name: #{name}, price: #{formatted_price}"
+	end
+end
+
+product = Product.new('A great movie', 1000)
+product.to_s
+
+product.name
+product.price
+
+
+# 確認
+
+product.class
+product.instance_of?(Product)
+
+product.is_a?(Product)
+product.is_a?(Object)
+product.is_a?(BasicObject)
+
