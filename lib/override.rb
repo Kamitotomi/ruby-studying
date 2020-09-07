@@ -6,6 +6,10 @@ class Product
 		@price = price
 	end
 
+	def to_s
+		"作品: #{name}, 鑑賞料金: #{price}　+ 円"
+	end
+
 end
 
 class DVD < Product
@@ -17,7 +21,7 @@ class DVD < Product
 	end
 
 	def to_s
-		"作品: #{name}, 鑑賞料金: #{price}　+ 円"
+		"作品: #{name}, 鑑賞料金: #{price}円, 公開期間: #{runnning_time}日"
 	end
 end
 
@@ -26,4 +30,4 @@ product.to_s
 
 dvd = DVD.new('An awsome film', 3000, 120)
 #文字列のメソッドの調整
-dvd.to_s
+puts dvd.to_s
