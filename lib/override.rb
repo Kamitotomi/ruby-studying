@@ -7,7 +7,7 @@ class Product
 	end
 
 	def to_s
-		"作品: #{name}, 鑑賞料金: #{price}　+ 円"
+		"作品: #{name}, 鑑賞料金: #{price}円"
 	end
 
 end
