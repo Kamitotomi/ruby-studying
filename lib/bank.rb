@@ -5,3 +5,5 @@ class Bank
 	
 	CURRENCIES = deep_freeze({ 'japan' => 'yen', 'US' => 'dollar', 'India' => 'rupee' })
 end
+
+

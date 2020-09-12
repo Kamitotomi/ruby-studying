@@ -5,6 +5,7 @@ module DeepFreezable
 	def deep_freeze(array_or_hash)
 		case array_or_hash
 		# 配列の各要素をfreeze
+		
 		when Array 
 			array_or_hash.each do |element|
 				element.freeze
