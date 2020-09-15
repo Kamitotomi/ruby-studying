@@ -87,3 +87,28 @@ product.title
 
 user = User.new
 user.name
+
+
+# 名前空間の作成
+# 二つのSecondクラス（二塁手クラスと時計の砂クラスを区別する）
+
+module Baseball
+	class Second
+		def initialize(player, uniform_number)
+			@player = player
+			@uniform_number = uniform_number
+		end
+	end
+end
+
+module Clock
+	class Second
+		def initialize(digits)
+			@digits = digits
+		end
+	end
+end
+
+Baseball::Second.new('Tomoya Mori', 13)
+
+Clock::Second.new(20)
