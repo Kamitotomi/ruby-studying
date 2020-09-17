@@ -111,3 +111,9 @@ end
 currency_of(:japan)
 currency_of(:us)
 currency_of(:itary)
+
+
+# ブロック付きでオープンすると、メソッドの実行後にクローズ
+File.open(some.txt, "w") { |file|  }
+	file << 'Hello'
+end
