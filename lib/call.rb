@@ -2,6 +2,7 @@
 
 def greeting(&block)
 	puts 'おはよう'
+	puts block.class
 	# callメソッドの使用
 	unless block.nil?
 		text = block.call('こんにちは')
