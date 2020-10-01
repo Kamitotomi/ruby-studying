@@ -1,0 +1,28 @@
+改札機プログラムを西武池袋線で考えてみる（清瀬～池袋までしかないものとする）
+実際に調べたところ
+
+１．清瀬～東久留米orひばり　147円	＝ １～２駅分
+２．清瀬～保谷or大泉学園　178円　＝　３～４駅分　
+３．清瀬～（石神井公園～富士見台）210円　＝　５～７駅分
+４．清瀬～（中村橋～江古田）　242円　＝　８～１０駅分
+５．清瀬～（東長崎～池袋）272円　＝　１１～１３駅分
+
+必要な情報
+駅名
+区間の長さ
+運賃
+出れるのかいでれないのかいどっちなんだい！？
+
+STATIONS = [:kiyose, :higashikurume, :hibarigaoka, :hoya, :oizumigakuenn, :syakujiikouen, :nerimatakanodai, :hujimidai, :nakamurabashi, :nerima, :sakuradai, :ekoda, :higashinagasaki, :siinamachi, :ikebukuro]
+
+FARES = [147, 178, 210, 242, 272]
+
+必要なクラスはなんだ。Railsでいうところのmodelなのか？
+必要なメソッドはなんだ。
+
+自分のいる駅名を保存するメソッド
+適切な運賃を計算する
+
+要するにGateをexitした時にtrue か　falseかを言わせようというメソッドだ。
+
+Gate.newには駅名の引数が必要でTicket.newには運賃の引数が必要になる
