@@ -28,11 +28,11 @@ class Gate
 	def calc_fare(ticket)
 		from = STATIONS.index(ticket.stamped_at)
 		# stamped_atに格納されているのは駅名
-		# indexは配列の中から引数に合致する要素の添え字（（:juso）なら１）を取得
 		to = STATIONS.index(@name)
-
+		# indexは配列の中から引数に合致する要素の添え字（（:juso）なら１）を取得
 		distance = to - from
 		
     	FARES[distance - 1]
+    	# なぜだか知らんが、ともかくこのFARES[]がこのメソッドの戻り値になっている
 	end
 end
