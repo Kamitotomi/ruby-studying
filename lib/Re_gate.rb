@@ -20,18 +20,24 @@ class Gate
 	# 要するに、ticket = Ticket.new()をユーザーにさせることが前提の引数ticketである。
 
 
-	def calculate
+	def exit(ticket)
+		fare = calculate(ticket)
+		
+		fare <= ticket.fare
+
+	end
+
+	def calculate(ticket)
 		from = STATIONS.index(ticket.get_on)
 		# ticiket.get_onはTicketクラスにあり。attr_readerでget_onは使えるようになっている。後、get_onは駅名
 		# なんにせよ、エラーは起きないようにはなっていますな
 		to = STATIONS.index(@name)
+		# こっちのはテストコードでセットアップしているGate.new()のどれかが入る
+		distance = to - from
+
+		FARES[distance - 1]
 	end
 	# なんかGateクラスなのに平然とticketが出てくるのほんとムカつく。
-
-
-	def exit
-		# 最終的に必要な料金を表示できるようにしてみたい
-	end
 
 end
 

@@ -8,7 +8,7 @@ class GateTest < Minitest::Test
 		@higashikurume = Gate.new(:higashikurume)
 		@hibarigaoka = Gate.new(:hibarigaoka)
 		@hoya = Gate.new(:hoya)
-		@ooizumigakuenn = Gate.new(:oizumigakuenn)
+		@oizumigakuenn = Gate.new(:oizumigakuenn)
 		@syakujiikouen = Gate.new(:syakujiikouen)
 		@nerimatakanodai = Gate.new(:nerimatakanodai)
 		@hujimidai = Gate.new(:hujimidai)
@@ -21,4 +21,13 @@ class GateTest < Minitest::Test
 		@ikebukuro = Gate.new(:ikebukuro)
 	end
 	# 絶対別の方法あるだろ感が凄いですが私には思いつきません。
+
+	def test_kiyose_to_higashikurume
+		
+		ticket = Ticket.new(210)
+		@kiyose.enter(ticket)
+		assert @higashikurume.exit(ticket)
+		
+	end
+
 end
