@@ -37,4 +37,11 @@ class GateTest < Minitest::Test
 		assert "いってらっしゃい"
 	end
 
+	def test_hibarigaoka_to_ikebukuro
+		ticket = Ticket.new(170)
+		@hibarigaoka.enter(ticket)
+		@ikebukuro.exit(ticket)
+		assert "Re 0から始まる電車移動"
+	end
+
 end
