@@ -26,8 +26,15 @@ class GateTest < Minitest::Test
 		
 		ticket = Ticket.new(210)
 		@kiyose.enter(ticket)
-		assert @higashikurume.exit(ticket)
-		
+		@higashikurume.exit(ticket)
+		assert "いってらっしゃい"
+	end
+
+	def test_kiyose_to_nerima
+		ticket = Ticket.new(242)
+		@kiyose.enter(ticket)
+		@nerima.exit(ticket)
+		assert "いってらっしゃい"
 	end
 
 end
