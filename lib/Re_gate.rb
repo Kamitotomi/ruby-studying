@@ -5,7 +5,7 @@ class Gate
 	# 駅名の配列
 	STATIONS = [:kiyose, :higashikurume, :hibarigaoka, :hoya, :oizumigakuenn, :syakujiikouen, :nerimatakanodai, :hujimidai, :nakamurabashi, :nerima, :sakuradai, :ekoda, :higashinagasaki, :siinamachi, :ikebukuro]
 	# 運賃の配列
-	FARES = [147, 178, 210, 242, 272]
+	FARES = [147, 147, 178, 178, 210, 210, 210, 242, 242, 242, 272, 272, 272]
 	# ICカードで買うパターンにするとしたらこれではない感ある。
 
 	def initialize(name)
@@ -21,9 +21,15 @@ class Gate
 
 
 	def exit(ticket)
+		
 		fare = calculate(ticket)
 		
-		fare <= ticket.fare
+		if fare <= ticket.fare
+			puts "いってらっしゃい"
+		else
+			puts "Re 0から始まる電車移動"
+		end
+
 
 	end
 

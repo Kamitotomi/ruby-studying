@@ -34,6 +34,6 @@ class GateTest < Minitest::Test
 	def test_juso_to_mikuni
 		ticket = Ticket.new(150)
 		@juso.enter(ticket)
-		assert @mikuni.exit(ticket)
+		refute @mikuni.exit(ticket)
 	end
 end
