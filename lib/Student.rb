@@ -6,6 +6,7 @@ Avarage = 310
 Stdevp = 8.9
 
 points = [50, 60, 70, 70, 80]
+# 個人の合計点。これを集めてn（全体数）で割る必要がある
 sum = points.inject(0){ |result, n| result + n }
 
 sum
@@ -16,4 +17,22 @@ deviation = (50 + 10 * (sum - Avarage) / 8.9).floor
 
 # 平均点と、個々の合計点と標準偏差が必要になる
 
+# sumのブロックそのものを配列にして、sum.count？を分母にする。分子はsum自体を更に繰り返し処理したもの？
+# Avarage = 全生徒の
+
 # student1.偏差値計算メソッド　=> student1の偏差値
+
+class Student
+	# .newで何を持たせるか？
+	def initialize(sum)
+		# 合計点がで出るやつ
+		# sum = こいつの合計
+		@sum = sum
+	end
+
+	def calculate
+		@sum
+	end
+
+end
+
