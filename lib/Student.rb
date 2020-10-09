@@ -12,7 +12,7 @@ sum = points.inject(0){ |result, n| result + n }
 sum
 # 合計は330点。仮にこの点数を取った人物をSとしてその偏差値は
 
-deviation = (50 + 10 * (sum - Avarage) / 8.9).floor
+deviation = (50 + 10 * (sum - Avarage) / Stdevp).floor
 #　偏差値が72と出る。
 
 # 平均点と、個々の合計点と標準偏差が必要になる
@@ -23,16 +23,19 @@ deviation = (50 + 10 * (sum - Avarage) / 8.9).floor
 # student1.偏差値計算メソッド　=> student1の偏差値
 
 class Student
-	# .newで何を持たせるか？
-	def initialize(sum)
+
+	def initialize(name, score)
 		# 合計点がで出るやつ
 		# sum = こいつの合計
-		@sum = sum
+		@name = name
+		@score = score
 	end
 
-	def calculate
-		@sum
+	def introduction
+		"I am #{@name}. My score is #{@score}. プラス５０で#{@score + 50}"
 	end
 
 end
 
+student1 = Student.new('Ken', 380)
+student1.introduction
