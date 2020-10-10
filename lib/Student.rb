@@ -22,20 +22,13 @@ deviation = (50 + 10 * (sum - Avarage) / Stdevp).floor
 
 # student1.偏差値計算メソッド　=> student1の偏差値
 
-class Student
+class Score
 
-	def initialize(name, score)
-		# 合計点がで出るやつ
-		# sum = こいつの合計
-		@name = name
-		@score = score
+	# 空の配列にしてそこに数入れていけばいいのか？なんとかしてpoints = [50, 60, 70, 70, 80]の形を
+
+	def initialize(points = [])
+		@points = points
 	end
 
-	def introduction
-		"I am #{@name}. My score is #{@score}. プラス５０で#{@score + 50}"
-	end
 
 end
-
-student1 = Student.new('Ken', 380)
-student1.introduction
